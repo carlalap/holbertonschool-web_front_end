@@ -4,5 +4,5 @@ In this project, you will learn how to use HTML tags to structure a web page. No
 Important note: details are important! lowercase vs uppercase / wrong letter… be careful!
 
 
-![Alt Image with Airbnb clone](html_advanced/html_advanced/images
+![Alt Image with Airbnb clone](html_advanced/images
 /Website.png)
