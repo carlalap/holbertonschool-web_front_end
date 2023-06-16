@@ -3,8 +3,6 @@ In this project, you will learn how to use HTML tags to structure a web page. No
 
 Important note: details are important! lowercase vs uppercase / wrong letter… be careful!
 
-<p align="center">
-  <img src="holbertonschool-web_front_end/html_advanced/html_advanced/images
-/Website.png" alt="Alt Text">
-</p>
 
+![Alt Image with Airbnb clone](html_advanced/html_advanced/images
+/Website.png)
