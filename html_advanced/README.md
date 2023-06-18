@@ -1,6 +1,7 @@
 
-<title>Advanced HTML </title>
+<h1><title>Advanced HTML </title></h1>
 
+<div class="panel panel-default" id="project-description">
 <div class="panel-body">
    <p>
    <em>For this project, we expect you to look at this concept:</em>
