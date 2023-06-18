@@ -1,8 +1,6 @@
 
-<h1><title>Advanced HTML </title></h1>
+<h1>Advanced HTML</h1>
 
-<div class="panel panel-default" id="project-description">
-<div class="panel-body">
    <p>
    <em>For this project, we expect you to look at this concept:</em>
    </p>
@@ -26,9 +24,6 @@
 <li><a href="/rltoken/33djKxCai7mwDufKGL7eCg" title="HTML Cheat Sheet - WebsiteSetup" target="_blank">HTML Cheat Sheet - WebsiteSetup</a></li>
 </ul>
 
-<h2>Learning Objectives</h2>
-
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/pt--DhAqMLE-NJtA1N_8hg" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <ul>
 <li>Which guidelines to follow for HTML</li>
@@ -66,5 +61,3 @@
 
 <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/3e4f9e2b3cb73d1768229e086f5da35337be5c6c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230618%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230618T034243Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=6fc5b8ea45ced648a21e2f12fb0ac1758423642167dbee7d4d683e8ead639d2b" alt="" loading='lazy' style="" /></p>
 
-  </div>
-</div>
