@@ -45,10 +45,12 @@
 <li><code>Techium</code> will be the name of the company we will use across our webpages.</li>
 </ul>
 
-<h2>Sitemap of the project</h2>
-<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/4dec2ba9d84a0a55355b1c1e2de4c57854a2d35a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230618%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230618T034243Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f8d97d8062df78ed3d6493d20db9a15200c5e9bf45f02b18f40e5f1f077bd36f" alt="" loading='lazy' style="" /></p>
 
-<h2>Wireframe of <code>Techium</code> project</h2>
+## Sitemap of the project
 
-<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/3e4f9e2b3cb73d1768229e086f5da35337be5c6c.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230618%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230618T034243Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=6fc5b8ea45ced648a21e2f12fb0ac1758423642167dbee7d4d683e8ead639d2b" alt="" loading='lazy' style="" /></p>
+![Sitemap](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/4dec2ba9d84a0a55355b1c1e2de4c57854a2d35a.png)
+
+## Wireframe of `Techium` project
+
+![Wireframe](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/3e4f9e2b3cb73d1768229e086f5da35337be5c6c.png)
 
