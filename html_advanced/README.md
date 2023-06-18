@@ -1,17 +1,8 @@
 
 <h1>Advanced HTML</h1>
 
-   <p>
-   <em>For this project, we expect you to look at this concept:</em>
-   </p>
-
-   <ul>
-   <li>
-   <a href="/concepts/870">HTML - elements of a web page</a>
-   </li>
-   </ul>
-   </div>
-
+<br>In this project, I learnt how to use HTML tags to structure a web page. No CSS, no styling - don’t worry, the final page will be “ugly” it’s normal, it’s not the purpose of this project.
+ 
 <h2>Resources</h2>
 
 <p><strong>Read or watch</strong>:</p>
@@ -24,6 +15,7 @@
 <li><a href="/rltoken/33djKxCai7mwDufKGL7eCg" title="HTML Cheat Sheet - WebsiteSetup" target="_blank">HTML Cheat Sheet - WebsiteSetup</a></li>
 </ul>
 
+<h2>Learning Objectives</h2>
 
 <ul>
 <li>Which guidelines to follow for HTML</li>
@@ -54,7 +46,6 @@
 </ul>
 
 <h2>Sitemap of the project</h2>
-
 <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/4dec2ba9d84a0a55355b1c1e2de4c57854a2d35a.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230618%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230618T034243Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=f8d97d8062df78ed3d6493d20db9a15200c5e9bf45f02b18f40e5f1f077bd36f" alt="" loading='lazy' style="" /></p>
 
 <h2>Wireframe of <code>Techium</code> project</h2>
