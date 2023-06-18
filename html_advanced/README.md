@@ -48,9 +48,9 @@
 
 ## Sitemap of the project
 
-![Sitemap](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/4dec2ba9d84a0a55355b1c1e2de4c57854a2d35a.png)
+![Sitemap](./images/Sitemap.png)
 
 ## Wireframe of `Techium` project
 
-![Wireframe](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/4/3e4f9e2b3cb73d1768229e086f5da35337be5c6c.png)
+![Wireframe](./images/wireframe.png)
 
