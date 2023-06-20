@@ -410,12 +410,11 @@
 
 <p>You can save it in a <code>index.html</code> file and replace the <code>&lt;link rel=&#39;stylesheet&#39; href=&#39;#&#39;&gt;</code> by the right CSS file.</p>
 
-<h2>End goal of the project</h2>
+<h2>Sitemap of the project</h2>
 
-<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/10/b9a220ba79af9ede6fc5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20230618%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20230618T042156Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=9a54dd2fd3a6cfb7064d4e1aad36a4e2c34c1a864c7a65d8efdf5ae44b245b28" alt="" loading='lazy' style="" /></p>
+![index](./images/Index.png)
+
 
 <p>Important note: <strong>details are important!</strong> lowercase vs uppercase / wrong letter&hellip; be careful!</p>
-
-
 
 
