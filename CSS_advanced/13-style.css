@@ -1,4 +1,4 @@
-/* Css Style */
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
@@ -12,9 +12,21 @@ body {
     line-height: var(--line-height-base);
 }
 
-a {
+a:link {
     color: var(--text-color);
     text-decoration: none;
+}
+
+a:visited {
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: var(--color-light-grey);
 }
 
 .visually-hidden {
@@ -29,16 +41,22 @@ a {
     text-align: var(--section-header-align);
 }
 
-.section-tagline {
-    color: var(--color-primary);
+.section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.section-tagline {
+    color: var(--color-primary);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
 }
@@ -63,4 +81,7 @@ h6 {
     --line-height-base: 1.5;
     --line-height-big: 1.8;
     --section-header-align: center;
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
 }
