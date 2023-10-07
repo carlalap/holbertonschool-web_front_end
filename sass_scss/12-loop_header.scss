@@ -1,0 +1,6 @@
+//12. Loop Headers
+@for $i from 0 to 5 {
+    h#{$i + 1} {
+        font-size: $i + 1px;
+    }
+}
