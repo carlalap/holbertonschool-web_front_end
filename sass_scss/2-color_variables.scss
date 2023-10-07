@@ -1,0 +1,13 @@
+//2. Colors
+$txt_color: #3D3D3D;
+$bck_color: #6D6D6D;
+
+body {
+    color: $txt_color;
+    background-color: $bck_color; }
+  
+  p {
+    color: $txt_color; }
+  
+  h2 {
+    background-color: $bck_color; }
