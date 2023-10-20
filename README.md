@@ -9,3 +9,5 @@
 3. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/developer_tools"> developer_tools</a>
 4. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/sass_scss"> sass_scss</a>
 5. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/flexbox"> flexbox</a>
+6. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/accessibility"> accessibility</a>
+7. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/form"> form</a>
