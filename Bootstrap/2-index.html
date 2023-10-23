@@ -9,25 +9,25 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <header>
-            <ul>
-                <li>
+        <header class="border-bottom p-2 m-3 mb-0 bg-light ">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group mr-auto">
                     <a href="/">
-                        <img src="https://via.placeholder.com/150x50" />
+                        <img src="https://via.placeholder.com/150x50" class="rounded"/>
                     </a>
                 </li>
-                <li>
-                    <a href="#">Chemical elements</a>
+                <li class="list-group mr-1">
+                    <a href="#" class="btn btn-secondary mr-1 align-middle active">Chemical elements</a>
                 </li>
-                <li>
-                    <a href="#">Profile</a>
+                <li class="list-group">
+                    <a href="#" class="btn btn-secondary align-middle">Profile</a>
                 </li>
             </ul>
         </header>
 
         <main>
-            <section>
-                <div role="alert">
+            <section class="container mw-100">
+                <div role="alert" class="alert alert-info">
                     <h4>List of chemical elements</h4>
                     <p>This is a list of the 5 first chemical elements which have been identified as of 2019.</p>
                     <hr>
@@ -35,11 +35,12 @@
                 </div>
             </section>
 
-            <section>
-                <h1>Chemical elements <span>only 5</span></h1>
+            <section  class="container mw-100">
+                <h1 class="mb-4 mt-5">Chemical elements <span class="badge badge-info badge-pill">only 5</span></h1>
 
-                <div>
-                    <table>
+                <div class="container mw-100 p-0 overflow-x">
+                    <!-- table responsive with a break at 992px, dark style and hover on rows -->
+                    <table class="table table-dark table-hover table-responsive-lg">
                         <thead>
                             <tr>
                                 <th scope="col">Atomic number</th>
@@ -139,9 +140,5 @@
             </section>
         </main>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
