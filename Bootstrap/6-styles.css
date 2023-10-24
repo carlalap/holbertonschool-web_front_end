@@ -1,0 +1,62 @@
+/* to do
+1-btn-primary has as background color set to #E0003C and #BC1340 for hover/focus/active
+2-btn-outline-primary has text and border color set to #E0003C
+3-a link (no matter which color forced) has text color set to #E0003C normally, in hover and in focus
+4-Card (card container, but also header/footer) has border color set to #E0003C and radius to 1rem
+5-.text-muted has text color set to #8C8C8C 
+*/
+
+.btn-primary {
+background-color: #e0003C;
+border: #e0003C; 
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+    background-color: #bc1340;
+    border-color: #bc1340;
+}
+
+.btn-outline-primary {
+    color: #E0003C;
+    border-color: #E0003C;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: #bc1340 !important;
+  color: white !important;
+  border-color: white;
+}
+
+a,
+a:hover,
+a:focus {
+  color: #e0003c !important;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.card-header {
+    border-top-right-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
+    color: white !important;
+    background-color: #e0003c !important;
+  }
+
+.card, .card-footer {
+    border-color: #E0003C;
+
+}
+
+.text.muted {
+    color: #8c8c8c!important
+}
+
+.border-bottom {
+    border-bottom-color: #e0003c!important;
+}

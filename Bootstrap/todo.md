@@ -1,196 +1,335 @@
-Task0:
-From this HTML:
----Add Bootstrap to reset the CSS styling.
----Your final page must look like this:
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      0. Reboot styling
+    </h3>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        <title>Holberton - Web Stack - Bootstrap</title>
-        <meta name="description" content="Bootstrap is a free and open-source CSS framework">
 
-        <style>
-            .my-container {
-                background-color: #FF0000;
-            }
-        </style>
-    </head>
-    <body>
+<p>Add Bootstrap to reset the CSS styling.</p>
 
-        <div class="my-container">
-            <h1>Hello</h1>
-            <h2>Holberton</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat eleifend nulla, quis imperdiet lacus. Donec tempor lorem enim, sit amet tempus purus euismod sit amet. Nam laoreet quis purus a consequat. Quisque interdum bibendum varius. Praesent lobortis eros sit amet tortor varius elementum. Fusce eget varius ex. Cras id lectus consectetur, bibendum dolor in, hendrerit lacus. Praesent rutrum, odio id tincidunt fringilla, dolor eros condimentum lacus, blandit molestie massa velit hendrerit risus. Nam ex nunc, ultrices id nisi consectetur, mattis imperdiet purus. Sed tempus ullamcorper nisi, vitae pulvinar nunc varius eu. Maecenas ut volutpat lectus.</p>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Phasellus quis dolor sed ligula porttitor fringilla.</li>
-                <li>
-                    <ul>
-                        <li>Integer vulputate arcu quis luctus condimentum.</li>
-                        <li>Integer commodo turpis non ligula viverra, ut sagittis elit ornare.</li>
-                    </ul>
-                </li>
-                <li>Etiam porttitor justo in diam elementum, nec mollis tellus viverra.</li>
-                <li>Vivamus non ligula quis dui auctor sagittis.</li>
-            </ul>
-        </div>
+<p>Your final page must look like this:</p>
 
-    </body>
 
-</html>
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      1. Blocks
+    </h3>
 
-Task1:
-Requirements:
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
 
-You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
-You can not change the HTML structure - only adding classes is allowed
-Behaviors/styles:
+<p>Build this responsive web page:</p>
 
-For all cells of all rows:
+<p><img src="https://intranet-projects-files.s3.amazonaws.com/holbertonschool-webstack/623/1-index.gif" alt="" loading='lazy' style="" /></p>
 
-Padding at .5rem
-Background color of the name of the cell
-Text centered and white
-First line:
+<p><strong>Requirements:</strong></p>
 
-Each cell has the same width
-Screen >= 992px: display like 4 columns in one line
-Screen < 992px: display like 4 lines in one column
-Second line:
+<ul>
+<li>You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes</li>
+<li>You can not change the HTML structure - only adding classes is allowed</li>
+</ul>
 
-Each cell has the same width
-Screen >= 576px: display like 4 columns in one line
-Screen < 576px: display like 4 lines in one column
-Third line:
+<p><strong>Behaviors/styles:</strong></p>
 
-The last cell is taking 50% of the width screen
-The middle cell has 2 times the size of the first cell
-Screen >= 992px: display like 3 columns in one line
-Screen < 992px: display like 3 lines in one column
-Fourth line:
+<p>For all cells of all rows:</p>
 
-Different order (from left to right) based on the size
-Screen >= 1200px: Primary -> Success -> Danger -> Warning
-Screen between 992px and 1200px: Warning -> Primary -> Success -> Danger
-Screen between 768px and 992px: Danger -> Warning -> Primary -> Success
-Screen <= 768px: Success -> Danger -> Warning -> Primary
-Fifth line:
+<ul>
+<li>Padding at <code>.5rem</code></li>
+<li>Background color of the name of the cell</li>
+<li>Text centered and white</li>
+</ul>
 
-Each cell has the same width (~16% of the screen)
-Screen >= 768px: display like 2 columns on each side of the screen in one line
-Screen < 768px: display like 2 lines in one column
-Last line:
+<p><strong>First line:</strong></p>
 
-Each cell has the same width (~16% of the screen)
-Screen >= 768px: display like 3 columns in one line with the space between the first and middle cell 2 times bigger than the space between the middle cell and the last cell
-Screen < 768px: display like 3 lines in one column
+<ul>
+<li>Each cell has the same width</li>
+<li>Screen &gt;= 992px: display like 4 columns in one line</li>
+<li>Screen &lt; 992px: display like 4 lines in one column</li>
+</ul>
 
-task: 2. Table of chemical elements
-Requirements:
+<p><strong>Second line:</strong></p>
 
-You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
-You can not change the HTML structure - only adding classes is allowed
-Behaviors/styles:
+<ul>
+<li>Each cell has the same width</li>
+<li>Screen &gt;= 576px: display like 4 columns in one line</li>
+<li>Screen &lt; 576px: display like 4 lines in one column</li>
+</ul>
 
-Header:
-With border bottom
-Padding .5rem and margin bottom 1rem
-Background color “light”
-Horizontal listing, no margin bottom:
-First item aligned on the left with a border rounded image
-2 other items aligned on the right with 2 links (aligned vertically in the middle) with a layout of a button of style “secondary”
-The link “Chemical elements” is active
-The main block has full width, spanning the entire width of the viewport
-The first section:
-The div inside is an alert of style “info”:
-h4 is the header of this alert
-The last paragraph (containing the link) should not have any margin bottom
-The second section:
-h1 has a margin bottom at 1.5rem and margin top at 3rem
-Inside the h1, “only 5” has a badge layout of type “info”
-The div is able to make the table responsive with a break at 992px
-The table has “dark” style and hover on rows
+<p><strong>Third line:</strong></p>
 
-task: 3. Cards
-Requirements:
+<ul>
+<li>The last cell is taking 50% of the width screen</li>
+<li>The middle cell has 2 times the size of the first cell</li>
+<li>Screen &gt;= 992px: display like 3 columns in one line</li>
+<li>Screen &lt; 992px: display like 3 lines in one column</li>
+</ul>
 
-You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
-You can not change the HTML structure - only adding classes is allowed
-Behaviors/styles:
+<p><strong>Fourth line:</strong></p>
 
-The first div is a container with a break at 992px and padding of 3rem
-Inside, card is in row until 576px where it will switch to column
-Each card has a spacing of 1.5rem on top
-The text “Coding” is a card header
-Language name (card title) and description (card text) are inside a card body
-Duration in hour is a card footer
-Also, the button “Play with” has the “danger” layout and should open a modal
-The second div is the modal:
-Centered vertically and horizontally
-The form has a border on top and a padding on top of 1rem:
-Each items of the form are grouped
-The final rendering of the form must be the same as the screen (label on the left, color style, etc..)
+<ul>
+<li>Different order (from left to right) based on the size</li>
+<li>Screen &gt;= 1200px: Primary -&gt; Success -&gt; Danger -&gt; Warning</li>
+<li>Screen between 992px and 1200px: Warning -&gt; Primary -&gt; Success -&gt; Danger</li>
+<li>Screen between 768px and 992px: Danger -&gt; Warning -&gt; Primary -&gt; Success</li>
+<li>Screen &lt;= 768px: Success -&gt; Danger -&gt; Warning -&gt; Primary</li>
+</ul>
 
-Task4:
-Requirements:
+<p><strong>Fifth line:</strong></p>
 
-You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
-You can not change the HTML structure - only adding classes is allowed
-Behaviors/styles:
+<ul>
+<li>Each cell has the same width (~16% of the screen)</li>
+<li>Screen &gt;= 768px: display like 2 columns on each side of the screen in one line</li>
+<li>Screen &lt; 768px: display like 2 lines in one column</li>
+</ul>
 
-Body background is dark
-All elements are inside a div container with a break at 960px, background color light and a padding of 1rem
-h1 has a margin bottom and top of 1.5rem
-ul is a tabs navigation with the first item active by default
-The div after the ul is the container of tabs content with a background of color white and padding of 1rem
-The switch between tab contents is animated with a fade
-In the tab “Discography”:
-The list of discs has a grouped layout
-Each disc name has a link that extends or collapses description
+<p><strong>Last line:</strong></p>
 
-task5: 5. Show/Hide - screen size
-Requirements:
+<ul>
+<li>Each cell has the same width (~16% of the screen)</li>
+<li>Screen &gt;= 768px: display like 3 columns in one line with the space between the first and middle cell 2 times bigger than the space between the middle cell and the last cell</li>
+<li>Screen &lt; 768px: display like 3 lines in one column</li>
+</ul>
 
-You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes
-You can not change the HTML structure - only adding classes is allowed
-Behaviors/styles:
+  </div>
 
-Big title is displayed only for width screen > 768px
-Small title is displayed only for width screen <= 768px
-first div should:
-be centered as container and take the full width when the width of the screen <= 768px
-have “info color” background
-have some padding on the 4 directions
-have borders of the “info color” and rounded
-“Left div” should:
-be aligned on the left
-have light text color
-have light border on the bottom and right
-have some padding on the 4 directions
-“Middle div” should:
-be aligned in the center
-have light text color
-have light border on the bottom, left and right
-have some padding on the 4 directions
-have shadow
-disappear when the width of the screen <= 768px
-“Right div” should:
-be aligned on the right
-have light text color
-have light border on the bottom and left
-have some padding on the 4 directions
 
-Task6: 6. Overwrite CSS
-Requirements:
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      2. Table of chemical elements
+    </h3>
 
-You are not allow to define any styling in the head or inline of the HTML
-You can not change the HTML
-New styles:
+<p>Build this responsive web page:</p>
 
-btn-primary has as background color set to #E0003C and #BC1340 for hover/focus/active
-btn-outline-primary has text and border color set to #E0003C
-a link (no matter which color forced) has text color set to #E0003C normally, in hover and in focus
-Card (card container, but also header/footer) has border color set to #E0003C and radius to 1rem
-.text-muted has text color set to #8C8C8C
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/21d4b4b1fe964a1918f2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173230Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=74bdb9c4c8f8cdac1952b7d5f936ccf4f6f4245c925c8cfed616488e02ca44e0" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://intranet-projects-files.s3.amazonaws.com/holbertonschool-webstack/623/2-index.gif" alt="" loading='lazy' style="" /></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes</li>
+<li>You can not change the HTML structure - only adding classes is allowed</li>
+</ul>
+
+<p><strong>Behaviors/styles:</strong></p>
+
+<ul>
+<li>Header:
+
+<ul>
+<li>With border bottom</li>
+<li>Padding <code>.5rem</code> and margin bottom <code>1rem</code></li>
+<li>Background color &ldquo;light&rdquo;</li>
+<li>Horizontal listing, no margin bottom:
+
+<ul>
+<li>First item aligned on the left with a border rounded image</li>
+<li>2 other items aligned on the right with 2 links (aligned vertically in the middle) with a layout of a button of style &ldquo;secondary&rdquo; </li>
+<li>The link &ldquo;Chemical elements&rdquo; is active</li>
+</ul></li>
+</ul></li>
+<li>The <code>main</code> block has full width, spanning the entire width of the viewport</li>
+<li>The first <code>section</code>:
+
+<ul>
+<li>The div inside is an alert of style &ldquo;info&rdquo;:
+
+<ul>
+<li><code>h4</code> is the header of this alert</li>
+<li>The last paragraph (containing the link) should not have any margin bottom</li>
+</ul></li>
+</ul></li>
+<li>The second <code>section</code>:
+
+<ul>
+<li><code>h1</code> has a margin bottom at <code>1.5rem</code> and margin top at <code>3rem</code></li>
+<li>Inside the <code>h1</code>, &ldquo;only 5&rdquo; has a badge layout of type &ldquo;info&rdquo;</li>
+<li>The <code>div</code> is able to make the <code>table</code> responsive with a break at <code>992px</code></li>
+<li>The <code>table</code> has &ldquo;dark&rdquo; style and hover on rows</li>
+</ul></li>
+</ul>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      3. Cards
+    </h3>
+
+<p>Build this responsive web page:</p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/6e564c36491cda7c0540.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=3adb856d89f41869c3b64be735adfcefaf9aa8464fce5d49695e94269e9cc55a" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/272ce037250ea75212d5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=5f84f7060b4d26add0697031e9500094d8bb39d4ea4237944cf99d609b64d4f0" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://intranet-projects-files.s3.amazonaws.com/holbertonschool-webstack/623/3-index.gif" alt="" loading='lazy' style="" /></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes</li>
+<li>You can not change the HTML structure - only adding classes is allowed</li>
+</ul>
+
+<p><strong>Behaviors/styles:</strong></p>
+
+<ul>
+<li>The first <code>div</code> is a container with a break at <code>992px</code> and padding of <code>3rem</code>
+
+<ul>
+<li>Inside, card is in row until <code>576px</code> where it will switch to column</li>
+<li>Each card has a spacing of <code>1.5rem</code> on top</li>
+<li>The text &ldquo;Coding&rdquo; is a card header</li>
+<li>Language name (card title) and description (card text) are inside a card body</li>
+<li>Duration in hour is a card footer</li>
+<li>Also, the button &ldquo;Play with&rdquo; has the &ldquo;danger&rdquo; layout and should open a modal</li>
+</ul></li>
+<li>The second <code>div</code> is the modal:
+
+<ul>
+<li>Centered vertically and horizontally</li>
+<li>The <code>form</code> has a border on top and a padding on top of <code>1rem</code>:
+
+<ul>
+<li>Each items of the <code>form</code> are grouped</li>
+<li>The final rendering of the form must be the same as the screen (label on the left, color style, etc..)</li>
+</ul></li>
+</ul></li>
+</ul>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      4. Bob Dylan
+    </h3>
+<div>
+
+<p>Build this responsive web page:</p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/335e2b7e5816adec9ab2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=616348e68ce0d73a3f59c92f633375fb88c35a6e375328fe97c6417d284922a4" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/1e3580392c08f3040dcb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=02efbaa1b5fefb65f5eb387a18951d1736e6b2d3e792125bd33a13d106db1eff" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/8a56729197879f6ad637.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=d245409f74f712f8fbb37b15e58c4b01c6648c58997fe031adf7d8cf2cc231eb" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://intranet-projects-files.s3.amazonaws.com/holbertonschool-webstack/623/4-index.gif" alt="" loading='lazy' style="" /></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>You are not allow to define any styling in a CSS file, in head or inline - only Bootstrap classes</li>
+<li>You can not change the HTML structure - only adding classes is allowed</li>
+</ul>
+
+<p><strong>Behaviors/styles:</strong></p>
+
+<ul>
+<li>Body background is dark</li>
+<li>All elements are inside a <code>div</code> container with a break at <code>960px</code>, background color light and a padding of <code>1rem</code></li>
+<li><code>h1</code> has a margin bottom and top of <code>1.5rem</code></li>
+<li><code>ul</code> is a tabs navigation with the first item active by default</li>
+<li>The <code>div</code> after the <code>ul</code> is the container of tabs content with a background of color white and padding of <code>1rem</code></li>
+<li>The switch between tab contents is animated with a fade</li>
+<li>In the tab &ldquo;Discography&rdquo;:
+
+<ul>
+<li>The list of discs has a grouped layout</li>
+<li>Each disc name has a link that extends or collapses description<br></li>
+</ul></li>
+</ul>
+
+  </div>
+
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      5. Show/Hide - screen size
+    </h3>
+    <div>
+
+ <p>Build this responsive web page:</p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/1125166bbbfdf836f33d.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=e2583f56b89f1375f4087b22eccdb5213c54aa859e1c208d814e92d629cefa97" alt="" loading='lazy' style="" /></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>You are not allow to define any styling in a CSS file, in <code>head</code> or inline - only Bootstrap classes</li>
+<li>You can not change the HTML structure - only adding classes is allowed</li>
+</ul>
+
+<p><strong>Behaviors/styles:</strong></p>
+
+<ul>
+<li><code>Big title</code> is displayed only for width screen &gt; 768px</li>
+<li><code>Small title</code> is displayed only for width screen &lt;= 768px</li>
+<li>first <code>div</code> should:
+
+<ul>
+<li>be centered as container and take the full width when the width of the screen &lt;= 768px</li>
+<li>have &ldquo;info color&rdquo; background</li>
+<li>have some padding on the 4 directions</li>
+<li>have borders of the &ldquo;info color&rdquo; and rounded</li>
+</ul></li>
+<li>&ldquo;Left div&rdquo; should:
+
+<ul>
+<li>be aligned on the left</li>
+<li>have light text color</li>
+<li>have light border on the bottom and right</li>
+<li>have some padding on the 4 directions</li>
+</ul></li>
+<li>&ldquo;Middle div&rdquo; should:
+
+<ul>
+<li>be aligned in the center</li>
+<li>have light text color</li>
+<li>have light border on the bottom, left and right</li>
+<li>have some padding on the 4 directions</li>
+<li>have shadow</li>
+<li>disappear when the width of the screen &lt;= 768px</li>
+</ul></li>
+<li>&ldquo;Right div&rdquo; should:
+
+<ul>
+<li>be aligned on the right</li>
+<li>have light text color</li>
+<li>have light border on the bottom and left</li>
+<li>have some padding on the 4 directions</li>
+</ul></li>
+</ul>
+
+  </div>
+
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      6. Overwrite CSS
+    </h3>
+<div>
+<p>Create the custom stylesheet <code>6-styles.css</code> to match this layout.</p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/cfec56b8c859081abbd8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=1c3b4c17e4d18a5c8767ef90786921a32ce0ba4c0421a9622eb48e0f17168e00" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/3/d902ca67b96983d8792b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20231030%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20231030T173231Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=25a317f84e8a650d08e53aae62377cb232f38e52d5c0759501f0b3e093a1a170" alt="" loading='lazy' style="" /></p>
+
+<p><img src="https://intranet-projects-files.s3.amazonaws.com/holbertonschool-webstack/623/6-index.gif" alt="" loading='lazy' style="" /></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>You are not allow to define any styling in the head or inline of the HTML</li>
+<li>You can not change the HTML</li>
+</ul>
+
+<p><strong>New styles:</strong></p>
+
+<ul>
+<li><code>btn-primary</code> has as background color set to <code>#E0003C</code> and <code>#BC1340</code> for hover/focus/active</li>
+<li><code>btn-outline-primary</code> has text and border color set to <code>#E0003C</code></li>
+<li><code>a</code> link (no matter which color forced) has text color set to <code>#E0003C</code> normally, in hover and in focus</li>
+<li>Card (card container, but also header/footer) has border color set to <code>#E0003C</code> and radius to <code>1rem</code></li>
+<li><code>.text-muted</code> has text color set to <code>#8C8C8C</code></li>
+</ul>
+
+  </div>
