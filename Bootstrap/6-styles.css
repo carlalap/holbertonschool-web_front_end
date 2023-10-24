@@ -14,7 +14,7 @@ border: #e0003C;
 .btn-primary:hover, 
 .btn-primary:focus, 
 .btn-primary:active {
-    background-color: #bc1340;
+    background-color: #bc1340 !important;
     border-color: #bc1340;
 }
 

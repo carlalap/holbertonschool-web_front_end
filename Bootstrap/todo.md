@@ -3,11 +3,9 @@
       0. Reboot styling
     </h3>
 
-
 <p>Add Bootstrap to reset the CSS styling.</p>
 
 <p>Your final page must look like this:</p>
-
 
 <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
@@ -90,7 +88,6 @@
 </ul>
 
   </div>
-
 
 <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
@@ -240,7 +237,6 @@
 
   </div>
 
-
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
       5. Show/Hide - screen size
@@ -300,7 +296,6 @@
 </ul>
 
   </div>
-
 
 <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
