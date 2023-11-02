@@ -1,6 +1,6 @@
 
 
-<h1>holbertonschool-web_front_end</h1>
+<h1 align="center">holbertonschool-web_front_end</h1>
 
 ## Content
 
@@ -11,3 +11,4 @@
 5. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/flexbox"> flexbox</a>
 6. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/accessibility"> accessibility</a>
 7. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/form"> form</a>
+7. <a href="https://github.com/carlalap/holbertonschool-web_front_end/tree/main/Bootstrap"> Bootstrap </a>
