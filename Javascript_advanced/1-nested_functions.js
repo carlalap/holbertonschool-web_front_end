@@ -1,7 +1,9 @@
 /* Task 1. Closure Scope Chain  
 @description: Running the script should display
 three popups one by one with the text:
- Welcome, Welcome Holberton, and Welcome Holberton!*/
+ Welcome, Welcome Holberton, and Welcome Holberton!
+ -- Running the script should display three popups one by one with 
+ the text:  Welcome, Welcome Holberton, and Welcome Holberton!*/
 
 /* Global Variable */
 
