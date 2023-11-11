@@ -1,4 +1,4 @@
-<title>Project: JavaScript advanced </title>
+# Project: JavaScript advanced
 
  <div class="panel panel-default" id="project-description">
   <div class="panel-body">
