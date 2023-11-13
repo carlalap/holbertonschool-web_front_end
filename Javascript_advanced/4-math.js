@@ -1,4 +1,5 @@
 /* task 4. Complex Closure 
+@description: Code that performs mathematical operations. 
 test the code: node 4-math.js */
 
 /* Create a divideBy function */
