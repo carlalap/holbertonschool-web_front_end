@@ -1,4 +1,5 @@
 /* task 6. Private methods with closure
+@description: the code simulates a Hogwarts student with a private score.
 Executing the code should display in the console 
 Harry: 4
 Draco: -2 */
