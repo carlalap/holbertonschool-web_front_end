@@ -4,6 +4,7 @@ function processPayment(amount) {
     console.log(`Collecting payment of ${amount}`);
 }
 
+// function named processOrder takes 2 arguments OrderId & amount
 function processOrder(orderId, amount) {
     console.log(`${orderId} is being processed`);
     return (
@@ -11,6 +12,7 @@ function processOrder(orderId, amount) {
     );
 }
 
+/* main part of the code: */
 function main() {
     console.log("Processing orders");
     processOrder(12321, 10.99);
