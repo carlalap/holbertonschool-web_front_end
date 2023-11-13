@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change Mode Example</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-</head>
-<body>
-            <!-- Put yourJavaScrip Code here -->
-    <script>
-      //function accepts one argument data (String)
+/*Task14. Simple callback
+@createElement - function
+@queryWikipedia -  
+*/
+
+//function accepts one argument data (String)
 function createElement(data) {
     //It creates a paragraph element
     paragraph = document.createElement("p");
@@ -45,8 +35,3 @@ function queryWikipedia(callback) {
     document.addEventListener("DOMContentLoaded", function (event) {
       queryWikipedia(createElement);
     });
-        </script>
-            <!-- End of Code -->
-
-</body>
-</html>
