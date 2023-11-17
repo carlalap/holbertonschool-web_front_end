@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 7. Query - Setup your dev environment</title>
+        <!-- jQuery 3.x link Content Delivery Network (CDN) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    </head>
+
+    <body>
+        <script type="application/javascript">
+           function createSearchForm() {
+                // Create a empty input of type text
+                let searchText = $("<input>").attr({
+                    type: "text",
+                    placeholder: "Enter search term"
+                });
+
+                // Create an input of type submit
+                let submitButton = $("<input>").attr({
+                    type: "submit",
+                    value: "Search"
+                });
+
+                //creating an empty ul element
+                let listElement = $("<ul></ul>");
+
+                // Append the searcText, submitButton, and listElement to the body
+                $("body").append(searchText, submitButton, listElement);
+
+                // Add click event handler to the submitButton
+                submitButton.click(function () {
+                    // Get the value of the text input
+                    var inputValue = searchText.val();
+                    // Call the queryWikipedia function with the value of the text input
+                    queryWikipedia(inputValue);
+                });
+            }    
+
+            // Function to add a new article to the list
+            function addNewArticle(id, title, snippet) {
+                // Create a new li element
+                let listItem = $("<li></li>");
+
+                // Create the first paragraph with id and title
+                let firstParagraph = $("<p></p>").html("<span>" + id + " - </span><b>" + title + "</b>");
+
+                // Create the second paragraph with the snippet
+                let secondParagraph = $("<p></p>").text(snippet);
+
+                // Append the paragraphs to the li
+                listItem.append(firstParagraph, secondParagraph);
+
+                // Append the li to the ul element
+                $("ul").append(listItem);
+            }
+
+            // Function to query Wikipedia API and retrieve search results
+            function queryWikipedia(search) {
+                // Wikipedia API endpoint for search
+                var apiUrl = "https://en.wikipedia.org/w/api.php"
+                
+                var data = {
+                    action:"query",
+                    list:"search",
+                    format:"json",
+                    srsearch:search
+                };
+
+                // Make an AJAX request to the Wikipedia API
+                $.ajax({
+                    url: apiUrl,
+                    method: "GET",
+                    dataType: "jsonp",
+                    data: data,
+                    success: function (response) {
+                        
+                        $.each(response.query.search, function (index, article) {
+                            addNewArticle(article.pageid, article.title, article.snippet);
+                        });
+                    },
+                    error: function (error) {
+                        
+                        console.error("Error:", error);
+                    }
+                });
+            }
+
+            // Call the createSearchForm function to create the search form
+            createSearchForm();
+        
+        </script>
+
+     </body>
+</html>
