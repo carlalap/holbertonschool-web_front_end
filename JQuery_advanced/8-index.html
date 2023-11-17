@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 8. Query - Setup your dev environment</title>
+        <!-- jQuery 3.x link Content Delivery Network (CDN) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            /* This is a jQuery function that ensures the code inside
+            it runs only after the HTML document has been fully loaded.*/
+            $(document).ready(function () {
+              //Adding  createSearchForm:
+              function createSearchForm() {
+                $("body").append(
+                  '<input type="text" placeholder="Enter search term">',
+                  '<input type="submit" value="Search">',
+                  '<ul class="list">'
+                );
+                //add a class "submit" to the last input field
+                $("input").last().addClass("submit");
+
+                //Add click event handler to the submitButton
+                //and calls the queryWikipedia function.
+                $(".submit").click(function () {
+                  let search = $("input").first().val();
+                  $(".list").empty();
+                  queryWikipedia(search);
+                });
+              }
+
+              // adds a new article to the list
+              function addNewArticle(id, title, snippet) {
+                //Generates a random ID, appends a list item  <li>
+                let randId = Math.floor(Math.random() * Date.now());
+                $(".list").append("<li>");
+                $("li").last().addClass(`${randId}`);
+                //Appends two paragraph elements (<p>) to the list item.       
+                $(`.${randId}`).append("<p>", "<p>");
+                //1st <p> contains a span with the article's ID and title in bold
+                $(`.${randId} p`)
+                  .first()
+                  .append(`<span>${id} - <b>${title}</b></span>`);
+                //2nd <p> contains the article's snippet.
+                $(`.${randId} p`).last().append(`${snippet}`);
+              }
+
+              // Function to query Wikipedia API and retrieve search results
+              function queryWikipedia(search, offset = 0) {
+                // Make an AJAX request to the Wikipedia API
+                $.ajax({
+                  type: "GET",
+                  url: `https://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&srsearch=${search}&format=json&sroffset=${offset}`,
+                  success: function (result) {
+                    // get the array of result of JSON research
+                    let resArr = result.query.search;
+                    // loop to search over the array resArr
+                    for (let obj in resArr) {
+                    //If successful, it calls the addNewArticle function for each result
+                      addNewArticle(
+                        resArr[obj].pageid,
+                        resArr[obj].title,
+                        resArr[obj].snippet
+                      );
+                    }
+                    // print the results in the console
+                    console.log(result);
+                    //calls function with the total items per page, creates pagination
+                    buildPagination(result.query.searchinfo.totalhits, 10, offset);
+                  },
+                  error: function () {
+                    console.log("Something went wrong.");
+                  },
+                });
+              }
+              /* function builds a pagination UI based on the total
+              number of items, items per page, and the current offset. */
+              function buildPagination(numberOfItems, itemsPerPage, currentOffset) {
+                $(".list").append('<div class="page">');
+                let numPages = Math.floor(numberOfItems / itemsPerPage);
+                if (numPages > 100) numPages = 100;
+                for (let i = 0; i < numPages; i++) {
+                  $(".page").append(`<span>${i}</span>`);
+                  $(".page span").last().addClass(`${i}`);
+                  $(".page span").css({ cursor: "pointer", "margin-left": "10px" });
+                }
+                $(`span.${currentOffset / 10}`).css("font-weight", "bold");
+                $(".page span").click(function () {
+                  $(".list").first().empty();
+                  queryWikipedia($("input").eq(0).val(), this.className * 10);
+                });
+              }
+              //function to initialize the search form when the document is ready.
+              createSearchForm();
+            });
+          </script>    
+    </body>
+</html>
