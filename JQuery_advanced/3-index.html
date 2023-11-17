@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 3. Chain DOM elements</title>
+        <!-- jQuery 3.x link Content Delivery Network (CDN) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" 
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+        crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+             function createFamilyTree() {
+                //create table & header using JQuery
+                let table = $("<table></table>").append("<tr><th>Firstname</th><th>Lastname</th></tr>");
+                
+                // Add the table rows and cells
+                table.append("<tr><td>Guillaume</td><td>Salva</td></tr>",
+                             "<tr><td>Paulette</td><td>Salva</td></tr>",
+                             "<tr><td>Antoine</td><td>Salva</td></tr>");
+
+                // Append the entire table to the body using jQuery
+                $("body").append(table);
+                }
+                createFamilyTree();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 5. Click attribute and remove function</title>
+        <!-- jQuery 3.x link Content Delivery Network (CDN) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" 
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+        crossorigin="anonymous"></script>
+        <!-- Add CSS to the third cell to have an orange background -->
+        <style>
+            td.last {
+                background-color: orange;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            function createFamilyTree() {
+                //create table & header using JQuery
+                let table = $("<table></table>").append("<thead><tr><th>FirstName</th><th>LastName</th></tr></thead>");
+                
+                // Add the empty table
+                table.append("<tbody></tbody>");
+                // Append the entire table to the body using jQuery
+                $("body").append(table);
+                }
+               
+            // Create a function addNewMember    
+            function addNewMember(firstName, lastName) {
+                let row = $("<tr></tr>").append
+                (
+                    "<td>" + firstName + "</td>",
+                    "<td>" + lastName + "</td>",
+                    "<td class='last'> (X) </td>"
+                );
+                // On click on the third cell, it should remove the row
+                row.find("td.last").click(function() {
+                    $(this).parent().remove();
+                });
+                // Add the row to the table body
+                $("tbody").append(row);
+            }
+            // Add CSS to the third cell to have an orange background
+            //$("td.last").css("background-color", "orange");
+
+            //call the function createFamilyTree
+            createFamilyTree();
+
+            //Using addNewMember, generate a fake table with
+            addNewMember("Guillaume", "Salva");
+            addNewMember("Arielle", "Snizt");
+            addNewMember("Fanette", "Snizt");
+            addNewMember("Gerard", "Snizt");
+            addNewMember("Victor", "Salva");
+        </script>
+    </body>
+</html>

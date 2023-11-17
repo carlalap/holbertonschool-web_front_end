@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 6. Val, before, and prepend functions</title>
+        <!-- jQuery 3.x link Content Delivery Network (CDN) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" 
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+        crossorigin="anonymous"></script>
+        <!-- Add CSS to the third cell to have an orange background -->
+        <style>
+            td.last {
+                background-color: orange;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            
+            function createFamilyTree() {
+                // Create table & header using jQuery
+                var table = $("<table id='dataTable'></table>").append("<thead><tr><th>FirstName</th><th>LastName</th></tr></thead>", "<tbody></tbody>");
+
+                // Append the entire table to the body using jQuery
+                $("body").append(table);
+            }
+
+            // Create a function addNewMember    
+            function addNewMember(firstName, lastName, position) {
+                var newRow = $("<tr></tr>").append(
+                    "<td>" + firstName + "</td>",
+                    "<td>" + lastName + "</td>",
+                    "<td class='last'> (X) </td>"
+                );
+
+                // On click on the third cell, it should remove the row
+                newRow.find("td.last").click(function () {
+                    $(this).parent("tr").remove();
+                });
+
+                if (position == 'before') {
+                    // Add the row at the top of the table
+                    $("#dataTable tbody").prepend(newRow);
+                } else {
+                    // Add the new row at the bottom of the table
+                    $("#dataTable tbody").append(newRow);
+                }
+            }
+
+            function createForm() {
+                // Add before the table two input elements of type text
+                var input1 = $("<input>").attr("type", "text");
+                var input2 = $("<input>").attr("type", "text");
+
+                // Create a select element with options
+                var select = $("<select>")
+                    .append($("<option>").text("Before").val("before"))
+                    .append($("<option>").text("After").val("after"));
+
+                // Add an input element of type submit
+                var submit = $("<input>").attr("type", "submit");
+
+                // Add click event handler to the submit button
+                submit.click(function () {
+                    // Call the function addNewMember with 
+                    // the value of the two inputs and the value of the select element
+                    addNewMember(input1.val(), input2.val(), select.val());
+                });
+
+                // Adding elements before calling the table
+                $("#dataTable").before(input1, input2, select, submit);
+
+                // Select the second input using the :nth-of-type selector and add a class
+                $("#dataTable").nextAll("input[type='text']:nth-of-type(2)").addClass("second-input");
+            }
+
+            // Call the function createFamilyTree to create the initial table structure
+            createFamilyTree();
+
+            // Call the createForm function to add input elements and a select before the table
+            createForm();
+
+            // Using addNewMember, generate a fake table with
+            addNewMember("Guillaume", "Salva");
+            addNewMember("Arielle", "Snizt");
+            addNewMember("Fanette", "Snizt");
+            addNewMember("Gerard", "Snizt");
+            addNewMember("Victor", "Salva");
+        </script>
+
+     </body>
+</html>
