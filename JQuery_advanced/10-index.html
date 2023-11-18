@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 10. Another Get API</title>
+        <!-- jQuery 3.x link Content Delivery Network (CDN) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            //Create function addPostRow
+            function addPostRow(data) {
+                //Create a paragraph element
+                var paragraph = $("<span></span>").text("Post created with id " +  data.id + ", title: " + data.title + ", author: " + data.author);  )
+                //append to the body a paragraph
+                $(body).append(paragraph);
+            }
+
+            //Function listPosts
+            function listPosts() {
+                $.ajax({
+                    url: 'http://localhost:3000/posts',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        // Handle the retrieved data by calling addPostRow
+                        // for each element
+                        data.forEach(function(post) {
+                            addPostRow(post);
+                        });
+                    },
+                    error: function(error) {
+                        // display an alert with the message Server Error
+                        alert('Server Error');
+                        console.error('Error fetching posts:', error);
+                    }                    
+                });
+            }
+            // Call function listPosts when the page loads
+            $(document).ready(function () {
+            listPosts();
+            });
+            /* Run in your terminal json-server --watch db.json and 
+            in browser http://127.0.0.1:3000/posts/(1, 2, ..) */
+        </script>
+    </body>
+</html>
