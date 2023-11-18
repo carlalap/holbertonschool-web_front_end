@@ -1,4 +1,4 @@
-## Cookies & local storage
+# Cookies & local storage
 
 <h2>Resources</h2>
 

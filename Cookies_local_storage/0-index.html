@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 0. Create basic cookie</title>
+    </head>
+
+
+<body>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="Firstname">
+    <input type="text" id="email" placeholder="Email">
+    <button onclick="setCookies()">Log me in</button><br/>
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+    
+    <!-- Script Create basic cookie -->
+    <script type="application/javascript">
+        function setCookies() {
+            // create cookies 
+            const firstname = document.getElementById("firstname").value;
+            const email = document.getElementById("email").value;
+            
+            document.cookie = "firstname=" + firstname;
+            document.cookie = "email=" + email;
+        };
+
+        // Function that show cookies
+        function showCookies() {
+            // create a DOM element p 
+            let paragraph = document.createElement("p");
+            // set the inner html with Cookies: and value of the cookie
+            paragraph.innerHTML = "Cookies: " + document.cookie;
+            // add paragraph at the bottom of the page
+            document.body.appendChild(paragraph);
+        }
+    </script>
+
+
+</body>
+</html>
