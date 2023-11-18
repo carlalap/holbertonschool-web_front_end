@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 11. Another Get API</title>
+        <!-- jQuery 3.x link Content Delivery Network (CDN) -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            //Create function addPostRow
+            function addPostRow(data) {
+                //Create a paragraph element
+                var paragraph = $("<span></span>").text("Post created with id " +  data.id + ", title: " + data.title + ", author: " + data.author);
+                //append to the body a paragraph
+                $('body').append(paragraph);
+                }
+
+            //Function listPosts
+            function listPosts() {
+                $.ajax({
+                    url: 'http://localhost:3000/posts',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        // Handle the retrieved data by calling addPostRow
+                        // for each element
+                        data.forEach(function(post) {
+                            addPostRow(post);
+                        });
+                    },
+                    error: function(error) {
+                        // display an alert with the message Server Error
+                        alert('Server Error');
+                        console.error('Error fetching posts:', error);
+                    }                    
+                });
+            }
+
+            // Function to build the form
+            function buildForm() {
+              //Append a form to the body
+              $("body").append("<form></form>");
+
+              //Adding a <div> element for the author
+              $("form").append('<div><label for="author">Author</label><input type="text" id="author"></div>');
+
+              //Adding a <div> element for the title
+              $("form").append('<div><label for="title">Title</label><textarea id="title"></textarea></div>');
+                
+              //add a input of type submit
+              $("form").append('<input type="submit">');
+
+              //add click event handler to the submit button
+              $("form input[type='submit']").click(function (event){
+                  event.preventDefault();
+                  sendForm();
+              });
+              //Enable selecting text when clicking on the label
+              $("form label").click(function () {
+                var inputId = $$(this).attr("for");
+                $("#" + inputId).select();
+              });
+            }
+
+            // Function to send the form data
+            function sendForm() {
+                // Add text after the form
+                $('form').after('<p>About to send the query to the API</p>');
+
+                // Create a data object with title and author attributes
+                var data = {
+                    title: $('#title').val(),
+                    author: $('#author').val()
+                };
+
+                // Send a POST request to the server  endpoint posts with the data
+                $.ajax({
+                    url: 'http://localhost:3000/posts', 
+                    method: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function(response) {
+                        // Call addPostRow with the data from the API
+                        addPostRow(response);
+                    },
+                    error: function() {
+                        // Display an alert with the message Error sending the POST query
+                        alert('Error sending the POST query');
+                    }
+                });
+            }
+
+            // Call function listPosts when the page loads
+            $(document).ready(function () {
+                listPosts();
+                buildForm();
+            });
+            /* Run in your terminal json-server --watch db.json and 
+            in browser http://127.0.0.1:3000/posts/(1, 2, ..) */
+        </script>
+    </body>
+</html>

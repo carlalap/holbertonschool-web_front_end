@@ -1,64 +1,33 @@
 {
-    "posts": [
-      {
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-      },
-      {
-        "title": "Book No 2",
-        "author": "John Doe",
-        "id": 2
-      },
-      {
-        "title": "Book No 3 - Rich Dad Poor Dad",
-        "author": "Robert Kiyosaki",
-        "id": 3
-      },
-      {
-        "title": "Book No 4 - Assets make money",
-        "author": "f",
-        "id": 4
-      },
-      {
-        "title": "Book No 5 - The Richest Man In Babylon",
-        "author": "George S. Clason",
-        "id": 5
-      },
-      {
-        "title": "Book No 6 - The Cashflow Quadrant",
-        "author": "Robert Kiyosaki",
-        "id": 6
-      },
-      {
-        "title": "Book No 7 - Think and Grow Rich",
-        "author": "apoleon Hill",
-        "id": 7
-      },
-      {
-        "title": "Book No 8 - The 10X Rule",
-        "author": "Grant Cardone",
-        "id": 8
-      },
-      {
-        "title": "Book No 9 - The 4 Hour Work Week",
-        "author": "Tim Ferriss",
-        "id": 9
-      },
-      {
-        "title": "Book No 10 - Secrets of the Millionaire Mind",
-        "author": "T. Harv Eker",
-        "id": 10
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-      }
-    ],
-    "profile": {
-      "name": "typicode"
+  "posts": [
+    {
+      "title": "Book No 7 - Think and Grow Rich",
+      "author": "apoleon Hill",
+      "id": 7
+    },
+    {
+      "title": "Book No 8 - The 10X Rule",
+      "author": "Grant Cardone",
+      "id": 8
+    },
+    {
+      "title": "Book No 9 - The 4 Hour Work Week",
+      "author": "Tim Ferriss",
+      "id": 9
+    },
+    {
+      "title": "Book No 10 - Secrets of the Millionaire Mind",
+      "author": "T. Harv Eker",
+      "id": 10
+    },
+    {
+      "title": "",
+      "author": "John Doe",
+      "id": 11
     }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
   }
+}
