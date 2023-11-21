@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. Use js-cookie</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+   
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="Firstname">
+    <input type="text" id="email" placeholder="Email">
+    <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button><br/>
+
+    <div class="login" style="display: none;">
+        <h2></h2>
+        <input type="text" id="formFirstname" placeholder="Firstname">
+        <input type="text" id="formEmail" placeholder="Email">
+        <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button><br/>
+    </div>
+    
+    <h2>Cookies</h2>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script type="module">
+
+        // Function to set cookies and show welcome message
+        function setCookiesAndShowWelcomeMessage() {
+            const firstname = document.getElementById("firstname").value;
+            const email = document.getElementById("email").value;
+
+            // setting cookies to expire in 10 days
+            const d = new Date();
+            d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
+            let expires = d.toUTCString();
+
+            // Use js-cookie set function to set cookies
+            Cookies.set("firstname", firstname, { expires: 10, path: '/' });
+            Cookies.set("email", email, { expires: 10, path: '/' });
+
+            showWelcomeMessageOrForm();
+        }
+
+        // Function that show cookies
+        function showCookies() {
+            let paragraph = document.createElement("p");
+            
+            // Use js-cookie get function to get cookie values
+            const firstnameCookie = Cookies.get("firstname");
+            const emailCookie = Cookies.get("email");
+
+            // Append the paragraph to the body and show the cookie values
+            document.body.appendChild(paragraph);
+            paragraph.innerHTML = "Firstname: " + firstnameCookie + "<br/>Email: " + emailCookie;        
+        }
+
+        // Function to show the form
+        function showForm() {
+            var formElement = document.querySelector(".login");
+            formElement.style.display = "block";
+        }
+
+        // Function to hide the form
+        function hideForm() {
+            var formElement = document.querySelector(".login")
+            formElement.style.display = "none"
+        }
+
+        // Function removes the two cookies
+        function deleteCookiesAndShowForm() {
+            // Use js-cookie remove function to delete cookies
+            Cookies.remove("firstname", { path: '/' });
+            Cookies.remove("email", { path: '/' });
+
+            showForm();
+        };
+
+        // Function to delete cookies and show the form
+        function showWelcomeMessageOrForm() {
+            // Get the cookie values
+            let firstnameCookie = Cookies.get("firstname");
+            let emailCookie = Cookies.get("email");
+
+            // Get the HTML elements
+            let h1 = document.querySelector("h1");
+            let h2 = document.querySelector("h2");
+            let input1 = document.getElementById("firstname");
+            let input2 = document.getElementById("email");
+            let button = document.querySelector("button");
+            let div = document.querySelector("div");
+
+            // Check if the cookies are set or not
+            if (firstnameCookie && emailCookie) {
+                // Hide the input elements and show the welcome message
+                h1.style.display = "none";
+                input1.style.display = "none";
+                input2.style.display = "none";
+                button.style.display = "none";
+                div.style.display = "block";
+                h2.innerHTML = "Welcome, " + firstnameCookie + "! Your email is " + emailCookie + ".";
+            } else {
+                // Show the input elements and hide the welcome message
+                h1.style.display = "block";
+                input1.style.display = "inline";
+                input2.style.display = "inline";
+                button.style.display = "inline";
+                div.style.display = "none";
+                h2.innerHTML = "";
+            }
+        }
+
+        // Execute: Call showWelcomeMessageOrForm to check and display content
+        showWelcomeMessageOrForm();
+    </script>
+</body>
+</html>

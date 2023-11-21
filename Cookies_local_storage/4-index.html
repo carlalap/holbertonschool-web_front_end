@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. Use js-cookie</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+    <h1>Login to the website</h1>
+    
+     
+    <div class="login">
+        <h2></h2>
+        <input type="text" id="firstname" placeholder="Firstname">
+        <input type="text" id="email" placeholder="Email">
+        <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button><br/>
+    </div>
+    
+    <h2>Cookies</h2>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script type="application/javascript">
+
+        // Function to set cookies and show welcome message
+        function setCookiesAndShowWelcomeMessage() {
+            const firstname = document.getElementById("firstname").value;
+            const email = document.getElementById("email").value;
+
+            // setting cookies to expire in 10 days
+            const d = new Date();
+            d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
+            let expires = d.toUTCString();
+
+            // Use js-cookie set function to set cookies
+            Cookies.set("firstname", firstname, { expires: 10, path: '/' });
+            Cookies.set("email", email, { expires: 10, path: '/' });
+
+            showWelcomeMessageOrForm();
+        }
+
+        // Function that show cookies
+        function showCookies() {
+            let paragraph = document.createElement("p");
+            
+            // Use js-cookie get function to get cookie values
+            const firstnameCookie = Cookies.get("firstname");
+            const emailCookie = Cookies.get("email");
+
+            // Append the paragraph to the body and show the cookie values
+            document.body.appendChild(paragraph);
+            paragraph.innerHTML = "Firstname: " + firstnameCookie + "<br/>Email: " + emailCookie;        
+        }
+
+        // Function to show the form
+        function showForm() {
+            var formElement = document.querySelector(".login");
+            formElement.style.display = "block";
+        }
+
+        // Function to hide the form
+        function hideForm() {
+            var formElement = document.querySelector(".login")
+            formElement.style.display = "none"
+        }
+
+        // Function removes the two cookies
+        function deleteCookiesAndShowForm() {
+            // Use js-cookie remove function to delete cookies
+            let h1 = document.getElementById("welcome-message");
+            h1.remove();
+            Cookies.remove("firstname");
+            Cookies.remove("email");
+
+            showForm();
+        };
+
+        // Function to delete cookies and show the form
+        function showWelcomeMessageOrForm() {
+            let firstname = Cookies.get("firstname");
+            if (firstname) {
+                hideForm();
+
+                let welcomeMessage = document.createElement("h1");
+                welcomeMessage.innerText = `Welcome ${firstname}`;
+                welcomeMessage.setAttribute("id", "welcome-message");
+
+                let logout = document.createElement("a");
+                logout.innerText = "(logout)";
+                logout.setAttribute("class", "logout");
+                logout.addEventListener("click", deleteCookiesAndShowForm);
+
+                welcomeMessage.appendChild(logout);
+                document.body.appendChild(welcomeMessage);
+            } else {
+                showForm(); // Added this line
+            }
+        }
+
+        // Execute: Call showWelcomeMessageOrForm to check and display content
+        showWelcomeMessageOrForm();
+    </script>
+</body>
+</html>

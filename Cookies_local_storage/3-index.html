@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 3. Delete cookie and mini application</title>
+    </head>
+
+<body>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="Firstname">
+    <input type="text" id="email" placeholder="Email">
+    <button onclick="setCookies()">Log me in</button><br/>
+    
+    <div class="login" style="display: none;">
+        <h2></h2>
+        <input type="text" id="formFirstname" placeholder="Firstname">
+        <input type="text" id="formEmail" placeholder="Email">
+        <button onclick="setCookies()">Log me in</button><br/>
+    </div>
+
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <!-- Script Create basic cookie -->
+    <script type="application/javascript">
+
+        // SEt & create cookies +++++++++++++++++++++++ 
+        function setCookies() {
+            const firstname = document.getElementById("firstname").value;
+            const email = document.getElementById("email").value;
+            
+            // setting cookies to expire in 10 days
+            const d = new Date();
+            d.setTime(d.getTime() + (10*24*60*60*1000)); //(exdays*24*60*60*1000));
+            let expires = "expires=" + d.toUTCString();
+            
+            document.cookie = "firstname=" + firstname + ";" + "expires=" + expires + ";path=/";
+            document.cookie = "email=" + email + ";" + "expires=" + expires + ";path=/";
+        };
+
+
+        //return the value of the cookie with the name passed in argument
+        function getCookie(name) {
+            const cookies = document.cookie.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.startsWith(name + '=')) {
+                    return cookie.substring(name.length + 1);
+                }
+            }
+            return '';
+        }
+
+        // Function that show cookies ++++++++++++++
+        function showCookies() {
+            // create a DOM element p 
+            let paragraph = document.createElement("p");
+            
+            //Get the values of the function cookies
+            let firstnameCookie = getCookie("firstname");
+            let emailCookie = getCookie("email");
+           
+            // set the inner html with Cookies: and value of the cookie
+            paragraph.innerHTML = "Email: " + emailCookie + " - Firstname: " + firstnameCookie;
+            
+            // add paragraph at the bottom of the page
+            document.body.appendChild(paragraph);
+        }
+
+        // Function to show the form  ++++++++++
+        function showForm() {
+            var formElement = document.querySelector(".login");
+            formElement.style.display = "block";
+        }
+
+        // Function to hide the form  +++++++++++
+        function hideForm() {
+            var formElement = document.querySelector(".login")
+            formElement.style.display = "none"
+        }
+
+         // Function removes the two cookies
+        function deleteCookiesAndShowForm(){
+            var pastDate = new Date(0).toUTCString();
+
+            // Overwrite the cookies with expired values
+            document.cookie = "firstname=" + firstname + ";" + "expires=" + pastDate + ";path=/";
+            document.cookie = "email=" + email + ";" + "expires=" + pastDate + ";path=/";;
+            showForm();
+        };
+
+        // Function to delete cookies and show the form
+        function showWelcomeMessageOrForm (){
+            let firstname = getCookie("firstname");
+            if (firstname) {
+            hideForm();
+
+            let welcomeMessage = document.createElement("h1");
+            welcomeMessage.innerText = `Welcome ${firstname}`;
+            welcomeMessage.setAttribute("id", "welcome-message");
+
+            let logout = document.createElement("a");
+            logout.innerText = "(logout)";
+            logout.setAttribute("class", "logout");
+            logout.setAttribute("onclick", "deleteCookiesAndShowForm()");
+
+            welcomeMessage.appendChild(logout);
+            document.body.appendChild(welcomeMessage);
+            } else {
+                showForm();
+            }
+        };
+
+       
+        // Eexute: Call showWelcomeMessageOrForm to check and display content
+        showWelcomeMessageOrForm();
+
+    </script>
+
+</body>
+</html>
