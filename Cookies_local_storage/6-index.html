@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5. Local storage</title>
+    <title>6. Session storage</title>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </head>
 
@@ -15,7 +15,7 @@
         let availableItems = ['Shampoo','Soap','Sponge','Water'];
 
         function addItemToCart(item) {
-            window.localStorage.setItem(item, 'true');
+            window.sessionStorage.setItem(item, 'true');
             displayCart();
         }
 
@@ -37,15 +37,16 @@
         
         //Function checks if the local storage has any items or not
         function displayCart() {
-            if (window.localStorage.length > 0) {
+            if (window.sessionStorage.length > 0) {
                 let paragraph = document.createElement("p");
                 let text = document.createTextNode(
-                    `You previously had ${window.localStorage.length} items in your cart`
+                    `You previously had ${window.sessionStorage.length} items in your cart`
                 );
                 paragraph.appendChild(text);
                 document.body.appendChild(paragraph);
             }
         }
+
         if (typeof Storage !== "undefined") {
             createStore();
             displayCart();
