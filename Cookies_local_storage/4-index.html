@@ -10,7 +10,6 @@
 
 <body>
     <h1>Login to the website</h1>
-    
      
     <div class="login">
         <h2></h2>
@@ -26,10 +25,10 @@
 
         // Function to set cookies and show welcome message
         function setCookiesAndShowWelcomeMessage() {
-            const firstname = document.getElementById("firstname").value;
-            const email = document.getElementById("email").value;
+            let firstname = document.getElementById("firstname").value;
+            let email = document.getElementById("email").value;
 
-            // setting cookies to expire in 10 days
+            // setting cookies to expire (d) in 10 days
             const d = new Date();
             d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
             let expires = d.toUTCString();
@@ -50,8 +49,9 @@
             const emailCookie = Cookies.get("email");
 
             // Append the paragraph to the body and show the cookie values
-            document.body.appendChild(paragraph);
-            paragraph.innerHTML = "Firstname: " + firstnameCookie + "<br/>Email: " + emailCookie;        
+            
+            paragraph.innerHTML = "Firstname: " + firstnameCookie + "<br/>Email: " + emailCookie;  
+            document.body.appendChild(paragraph);      
         }
 
         // Function to show the form
@@ -64,7 +64,7 @@
         function hideForm() {
             var formElement = document.querySelector(".login")
             formElement.style.display = "none"
-        }
+        } 
 
         // Function removes the two cookies
         function deleteCookiesAndShowForm() {
