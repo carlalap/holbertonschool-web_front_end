@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task7. Advanced use of web storage</title>
+</head>
+<body>
+    <script>
+        // Create an array availableItems
+        let availableItems = ['Shampoo','Soap','Sponge','Water'];
+
+        // Function getCartFromStorage
+        function getCartFromStorage() {
+            // Parse a string into a JSON object, returns content of the cart
+            let cart = JSON.parse(sessionStorage.getItem("cart"));
+            // If there is no cart, return an empty object
+            if (!cart) {
+                cart = {};
+            }
+            return cart;
+        }
+
+        //Function addItemToCart
+        function addItemToCart(item) {
+            // Get the cart object from the session storage
+            let cart = getCartFromStorage();
+            // Add to the cart object the item
+            // If the same item is added multiple times, the cart store the quantity
+            if (cart[item]) {
+                cart[item] += 1;
+            } else {
+                cart[item] = 1;
+            }
+            // Store the value of the cart object in a string for the key cart in the Session Storage
+            window.sessionStorage.setItem("cart", JSON.stringify(cart));
+            // Call displayCart
+            displayCart();
+        }
+
+        // Create a function removeItemfromCart
+        function removeItemfromCart(item) {
+            // Get the cart object from the session storage
+            let cart = getCartFromStorage();
+            // Remove the entire item from the cart
+            delete cart[item];
+            // Store the value of the cart object in a string for the key cart in the Session Storage
+            window.sessionStorage.setItem("cart", JSON.stringify(cart));
+            // Call displayCart
+            displayCart();
+        }
+
+        // Create a function clearCart
+        function clearCart() {
+            // Clear the entire Session storage
+            window.sessionStorage.removeItem('cart');
+            // Call displayCart
+            displayCart();
+        }
+
+        // Create a function createStore
+        function createStore() {
+            // Add a h2 tag with the text Available products:
+            let h2 = document.createElement("h2");
+            h2.textContent = "Available products:";
+            document.body.appendChild(h2);
+            // Add a list with every item available for purchase
+            let ul = document.createElement("ul");
+            availableItems.forEach(function(item) {
+                let li = document.createElement("li");
+                li.textContent = item;
+                // When the user click on an item, it should add it to the cart
+                li.addEventListener("click", function() {
+                    addItemToCart(item);
+                });
+                ul.appendChild(li);
+            });
+            document.body.appendChild(ul);
+
+            // Add a h3 tag with the text Your cart
+            let h3 = document.createElement("h3");
+            h3.textContent = "Your cart:";
+            document.body.appendChild(h3);
+        }
+
+        
+        // Create a function displayCart
+        function displayCart() {
+            // If the div tag already exist, it should remove any list child
+            let oldDiv = document.querySelector("div");
+            if (oldDiv) {
+                oldDiv.remove();
+            }
+            // Add a new div tag
+            let div = document.createElement("div");
+            document.body.appendChild(div);
+            // Call updateCart
+            updateCart();
+        }
+
+        // Create a function updateCart
+        function updateCart() {
+            // Add a list to the div tag created previously
+            let ul = document.createElement("ul");
+            // Get the cart object from the session storage
+            let cart = getCartFromStorage();
+            // If the cart is empty, it should add an item Your cart is empty
+            if (Object.keys(cart).length === 0) {
+                let li = document.createElement("li");
+                li.textContent = "Your cart is empty";
+                ul.appendChild(li);
+            } else {
+                // If the cart is not empty, it should add the list of items within the cart with the following format: ITEM_NAME x QUANTITY (remove)
+                for (let item in cart) {
+                    let li = document.createElement("li");
+                    li.textContent = item + " x " + cart[item] + " ";
+                    // When the user clicks on remove, it should call the function removeItemfromCart
+                    let button = document.createElement("button");
+                    button.textContent = "(remove)";
+                    button.addEventListener("click", function() {
+                        removeItemfromCart(item);
+                    });
+                    li.appendChild(button);
+                    ul.appendChild(li);
+                }
+            }
+            // Add a button to clear the cart
+            let button = document.createElement("button");
+            button.textContent = "Clear cart";
+            button.addEventListener("click", function() {
+                clearCart();
+            });
+            ul.appendChild(button);
+            document.querySelector("div").appendChild(ul);
+        }
+
+        // If session storage is not enabled on your browser, display an alert with a message
+        // If session storage is available it should allow the user to see the application 
+        // and call the function createStore and displayCart
+        if (typeof sessionStorage !== 'undefined') {
+            try {
+                sessionStorage.setItem('test', 'test');
+                if (sessionStorage.getItem('test') === 'test') {
+                    sessionStorage.removeItem('test');
+                    createStore();
+                    displayCart();
+                } else {
+                    window.alert('Sorry, your browser does not support Web storage. Try again with a better one');
+                }
+            } catch {
+                window.alert('Sorry, your browser does not support Web storage. Try again with a better one');
+            }
+        } else {
+            window.alert('Sorry, your browser does not support Web storage. Try again with a better one');
+        }
+    </script>
+</body>
+</html>
