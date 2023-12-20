@@ -280,9 +280,9 @@ console.log(addBy1000(20));
   </div>
 
 <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+  <h3 class="panel-title">
       5. Changing DOM with closure
-    </h3>
+  </h3>
   </div>
 
   <div class="panel-body">
@@ -319,3 +319,54 @@ console.log(addBy1000(20));
 <li>Use vanilla JavaScript to add the elements to the DOM and change the style of the page</li>
 <li>JQuery not allowed!</li>
 </ul>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      6. Private methods with closure
+    </h3>
+  </div>
+
+   <!-- Task Body -->
+   <p>Write a module named <code>studentHogwarts</code>:</p>
+
+<ul>
+<li>It contains two variables <code>privateScore</code> set to 0, and <code>name</code> set to <code>null</code></li>
+<li>It contains one private method <code>changeScoreBy</code>, it takes <code>points</code> in argument and add it to <code>privateScore</code></li>
+<li>The module gives access to four public methods (return an object):
+
+<ul>
+<li><code>setName</code>, it takes into argument <code>newName</code>, and set the private variable <code>name</code></li>
+<li><code>rewardStudent</code>, it calls the method <code>changeScoreBy</code> with 1</li>
+<li><code>penalizeStudent</code>, it calls the method <code>changeScoreBy</code> with -1</li>
+<li><code>getScore</code>, it returns <code>name: score</code> (ex: <code>Harry: 14</code>)</li>
+</ul></li>
+</ul>
+
+<p>Create one variable named <code>harry</code>, that is an instance of <code>studentHogwarts</code>:</p>
+
+<ul>
+<li>Set the name of the object to <code>Harry</code></li>
+<li>Reward the student four times</li>
+<li>Log to the console the name and score</li>
+</ul>
+
+<p>Create one variable named <code>draco</code>, that is an instance of <code>studentHogwarts</code>:</p>
+
+<ul>
+<li>Sets the name of the object to <code>Draco</code></li>
+<li>Reward the student one time</li>
+<li>Penalize the student three times</li>
+<li>Log to the console the name and score</li>
+</ul>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Executing the code should display in the console</li>
+</ul>
+
+<pre><code>Harry: 4
+Draco: -2
+</code></pre>
+
+  </div>
