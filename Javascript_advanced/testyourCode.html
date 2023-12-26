@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Change Mode Example</title>
+  <!-- Opt 1 Include your JavaScript file -->
+  <!--<script src="100-stock.js" defer></script> -->
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,41 +14,25 @@
   </style>
 </head>
 <body>
-            <!-- Put yourJavaScrip Code here -->
+            <!-- Opt 2 Include your JavaScript file -->
     <script>
-      //function accepts one argument data (String)
-function createElement(data) {
-    //It creates a paragraph element
-    paragraph = document.createElement("p");
-    // The content of the paragraph is set to data
-    txt = document.createTextNode(data);
-    paragraph.appendChild(txt);
-    //It appends to the document body the paragraph
-    document.body.append(paragraph);
+     
+     function changeMode(size, weight, transform, background, color) {
+    return function() {
+        document.body.style.fontSize = size + 'px';
+        document.body.style.fontWeight = weight;
+        document.body.style.textTransform = transform;
+        document.body.style.backgroundColor = background;
+        document.body.style.color = color;
+    };
 }
 
-// function it accepts one argument callback (function)
-function queryWikipedia(callback) {
-    //Using XMLHttpRequest, it get the article of Stack Overflow with the URL
-    let request = new XMLHttpRequest();
-    let URL =
-    "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=Stack%20Overflow&origin=*";
-    request.open("GET", URL);
-    request.responseType = "json";
+let spooky = changeMode(9, 'bold', 'uppercase', 'pink', 'green');
+let darkMode = changeMode(12, 'bold', 'capitalize', 'black', 'white');
+let screamMode = changeMode(12, 'normal', 'lowercase', 'white', 'black');
 
-    request.onreadystatechange = function () {
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-          callback(request.response.query.pages["21721040"].extract);
-        }
-      };
-    
-      request.send();
-    }
-    
-    document.addEventListener("DOMContentLoaded", function (event) {
-      queryWikipedia(createElement);
-    });
-        </script>
+
+    </script>
             <!-- End of Code -->
 
 </body>
