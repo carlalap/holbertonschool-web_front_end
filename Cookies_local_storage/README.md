@@ -78,7 +78,7 @@
 <li>Try to make your page to look as close to the image below as possible</li>
 </ul>
 
-<p>![Basic Cookie](./images/cookies0.png)</p>
+![Basic Cookie](./images/cookies0.png)
 
 <ul>
 <li>Access your code with <code>http://localhost:8080/0-index.html</code></li>
@@ -204,11 +204,11 @@
 
 <p><strong>The login form should look like the image below</strong></p>
 
-<p>![Basic Cookie](./images/cookies1.png)</p>
+![Basic Cookie](./images/cookies1.png)
 
 <p><strong>When a user is logged in the page should look like the image below</strong></p>
 
-<p>![Basic Cookie](./images/cookies2.png)</p>
+![Basic Cookie](./images/cookies2.png)
 
   </div>
 
@@ -405,7 +405,7 @@
 <li>You can look at the GIF below to see how the interaction with the different elements works</li>
 </ul>
 
-<p>![Basic Cookie](./images/cookiesGIF.gif)</p>
+![Basic Cookie](./images/cookiesGIF.gif)
 
 <p><strong>Requirements:</strong></p>
 
