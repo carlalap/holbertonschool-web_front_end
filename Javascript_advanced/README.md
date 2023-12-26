@@ -370,3 +370,327 @@ Draco: -2
 </code></pre>
 
   </div>
+
+ <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      7. Stack order and setTimeout
+    </h3>
+  </div>
+
+   <!-- Task Body -->
+   <p><strong>Write the following commands in the following order:</strong></p>
+
+<ul>
+<li>Log to the console <code>Start of the execution queue</code></li>
+<li>Log to the console <code>Final code block to be executed</code> using <code>setTimeout</code> (with delay of 0)</li>
+<li>Using a loop that iterates 100 times, each iteration logs to the console the iteration number</li>
+<li>Log to the console <code>End of the loop printing</code></li>
+</ul>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Your code should log to the console the following:</li>
+</ul>
+
+<pre><code>Start of the execution queue
+1
+2
+...
+100
+End of the loop printing
+Final code block to be executed
+</code></pre>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      8. Stack order in functions
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+  <!-- Task Body -->
+  <p>Write a function <code>processPayment</code>:</p>
+
+<ul>
+<li>It takes one argument <code>amount</code> (number)</li>
+<li>It logs to the console <code>Collecting payment of &lt;amount&gt;</code></li>
+</ul>
+
+<p>Write a function named <code>processOrder</code>:</p>
+
+<ul>
+<li>It takes two arguments <code>orderId</code> (number), and <code>amount</code> (number)</li>
+<li>It logs to the console <code>&lt;orderId&gt; is being processed</code></li>
+<li>It calls the function <code>processPayment</code></li>
+<li>It logs to the console <code>&lt;orderId&gt; has been fully processed</code></li>
+</ul>
+
+<p>In the main part of the code:</p>
+
+<ul>
+<li>Logs to the console <code>Processing orders</code></li>
+<li>Call <code>processOrder</code> with <code>12321</code> and <code>10.99</code></li>
+<li>Call <code>processOrder</code> with <code>12322</code> and <code>12.99</code></li>
+<li>Call <code>processOrder</code> with <code>12323</code> and <code>15.0</code></li>
+<li>Logs to the console <code>All the orders have been processed</code></li>
+</ul>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Your code should log the following to the console</li>
+</ul>
+
+<pre><code>Processing orders
+12321 is being processed
+Collecting payment of 10.99
+12321 has been fully processed
+12322 is being processed
+Collecting payment of 12.99
+12322 has been fully processed
+12323 is being processed
+Collecting payment of 15
+12323 has been fully processed
+All the orders have been processed
+</code></pre>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      9. Prime numbers &amp; timing execution
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+  <!-- Task Body -->
+  <p>Write a function named <code>countPrimeNumbers</code>:</p>
+
+<ul>
+<li>It will return the number of prime numbers from 2 to 100</li>
+</ul>
+
+<p>Log to the console the time in milliseconds to execute the function in this format: <code>Execution time of printing countPrimeNumbers was &lt;time used&gt; milliseconds.</code></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>You must use <code>performance</code> API to measure the time needed to execute the function (<code>performance.now()</code>)</li>
+<li>Your code should display something in the range of <code>Execution time of printing countPrimeNumbers was 0.2700000002514571 milliseconds.</code></li>
+</ul>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      10. Execution stack &amp; timing execution
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+  <!-- Task Body -->
+  <p>Reuse the function <code>countPrimeNumbers</code> from <code>9-prime.js</code> (copy/paste)</p>
+
+<ul>
+<li>Execute the function <code>countPrimeNumbers</code> 100 times</li>
+<li>Log to the console the time in milliseconds to execute the function 100 times</li>
+</ul>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Your code should display something in the range of <code>Execution time of calculating prime numbers 100 times was 40.865000002551824 milliseconds.</code></li>
+</ul>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      11. Changing stack order using setTimeout
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+  <!-- Task Body -->
+  <p>Reuse the function <code>countPrimeNumbers</code> from <code>10-prime.js</code> (copy/paste)</p>
+
+<ul>
+<li>Log to the console the time in milleseconds to execute the function 100 times</li>
+<li>Find a way to actually do most of the calculation at the end of the execution stack</li>
+</ul>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Your code should display something in the range of <code>Execution time of calculating prime numbers 100 times was 0.03999999910593033 milliseconds.</code></li>
+<li>Use <code>setTimeout</code> keyword to change the stack order</li>
+</ul>
+
+  </div>
+
+ <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      12. Binding
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+  <!-- Task Body -->
+   <p>Create an object named <code>roomDimensions</code> with the following three attributes:</p>
+
+<ul>
+<li><code>width</code>: <code>50</code></li>
+<li><code>length</code>: <code>100</code></li>
+<li><code>getArea</code>: function that returns the surface area of a the object using the <code>width</code> and <code>length</code></li>
+</ul>
+
+<p>Create a variable named <code>boundGetArea</code>, that will bind the object <code>roomDimensions</code> to the <code>getArea</code> function</p>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      13. Binding + Closure
+    </h3>
+
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+!-- Task Body -->
+
+  <p>Write an object <code>user</code> with the attributes:</p>
+
+<ul>
+<li><code>hobby</code>: <code>Calligraphy</code></li>
+<li><code>favoriteSport</code>: <code>Hockey</code></li>
+<li><code>astrologicalSign</code>: <code>Aries</code></li>
+<li><code>firstName</code>: <code>Buillaume</code></li>
+<li><code>lastName</code>: <code>Ialva</code></li>
+<li><code>location</code>: <code>Telaviv</code></li>
+<li><code>occupation</code>: <code>Engineer</code></li>
+</ul>
+
+<p>Create a function named <code>logWelcomeUser</code>:</p>
+
+<ul>
+<li>It takes one argument <code>welcomeString</code> (String)</li>
+<li>It logs to the console <code>&lt;welcomeString&gt;, &lt;firstName&gt;. Your occupation is: &lt;occupation&gt;</code></li>
+</ul>
+
+<p>Create a variable named <code>bindLogWelcomeUser</code>. It binds the <code>logWelcomeUser</code> function to the <code>user</code> object.</p>
+
+<p>Call the function with the string <code>Welcome</code></p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Calling <code>bindLogWelcomeUser(&#39;Hello&#39;);</code> should return <code>Hello, Buillaume. Your occupation is: Engineer</code></li>
+</ul>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      14. Simple callback
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+  <!-- Task Body -->
+  <p>Write a new function named <code>createElement</code>:</p>
+
+<ul>
+<li>It accepts one argument <code>data</code> (String)</li>
+<li>It creates a paragraph element</li>
+<li>The content of the paragraph is set to <code>data</code></li>
+<li>It appends to the document <code>body</code> the paragraph</li>
+</ul>
+
+<p>Create a new function named <code>queryWikipedia</code>:</p>
+
+<ul>
+<li>It accepts one argument <code>callback</code> (function)<br></li>
+<li>Using <code>XMLHttpRequest</code>, it get the article of Stack Overflow with the URL <code>https://en.wikipedia.org/w/api.php?format=json&amp;action=query&amp;prop=extracts&amp;exintro&amp;explaintext&amp;redirects=1&amp;titles=Stack%20Overflow&amp;origin=*</code></li>
+<li>Once the fetch is correctly executed, it calls the <code>callback</code> function with the <code>extract</code> of the API response</li>
+</ul>
+
+<p>Call <code>queryWikipedia</code> with <code>createElement</code> as callback</p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Use vanilla javascript to run the Ajax query (no jQuery or other framework)</li>
+<li>You must not call <code>createElement</code> within <code>queryWikipedia</code> directly</li>
+</ul>
+
+  </div>
+
+<div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      15. Multiple callbacks
+    </h3>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="6138"></span>
+
+  <!-- Task Body -->
+   <p>Create a variable named <code>stock</code>:</p>
+
+<ul>
+<li>It contains the stock for the items you are selling</li>
+<li>It&rsquo;s a dictionary with the values <code>macbook: 2</code> and <code>iphone: 4</code></li>
+</ul>
+
+<p>Write a new function named <code>processPayment</code>:</p>
+
+<ul>
+<li>It accepts one argument <code>itemName</code> (String)</li>
+<li>It change the stock, by removing one item of the stock for the item passed in argument</li>
+<li>It logs to the console the text <code>Payment is being processed for item &lt;itemName&gt;</code></li>
+</ul>
+
+<p>Write a new function named <code>processError</code>:</p>
+
+<ul>
+<li>It accepts one argument <code>itemName</code> (String)</li>
+<li>It logs to the console the text <code>No more &lt;itemName&gt; in stock</code></li>
+<li>It logs to the console the text <code>Payment is not being processed</code></li>
+</ul>
+
+<p>Write a new function named <code>processOrder</code>:</p>
+
+<ul>
+<li>It accepts three arguments <code>itemName</code> (String), <code>callbackPayment</code> (function), and <code>callbackError</code> (function)</li>
+<li>It logs to the console the text <code>Verifying the stock of &lt;itemName&gt;</code></li>
+<li>If there is enough stock for the item, it calls <code>callbackPayment</code></li>
+<li>If there is not enough stock for the item, it calls <code>callbackError</code></li>
+</ul>
+
+<p>Prompt to the user the message <code>Please enter the item you would like to purchase (Macbook, iPhone)</code> and pass the right callbacks</p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li>Make sure that the case is not creating a problem (e.g <code>MacBOok</code> should still work)</li>
+<li>Make sure that items that are not offered get the correct message</li>
+</ul>
+
+  </div>
