@@ -114,9 +114,6 @@ It contains <strong>CSS</strong> and <strong>JavaScript</strong> design template
     </h3>
   </div>
 
-  <div class="panel-body">
-    <span id="user_id" data-id="6138"></span>
-
   <!-- Task Body -->
   <p>From this HTML:</p>
 
@@ -414,7 +411,7 @@ It contains <strong>CSS</strong> and <strong>JavaScript</strong> design template
 
 <p>Build this responsive web page:</p>
 
-![Task2. Table of chemical elements](./images/bootstrap1.jpg)
+![Task2. Table of chemical elements](./images/bootstrap1.png)
 
 ![Task2. Table of chemical elements](./images/2-GIFBootstrap.gif)
 
@@ -472,8 +469,6 @@ It contains <strong>CSS</strong> and <strong>JavaScript</strong> design template
 
   </div>
 
-  <div class="panel-body">
-    <span id="user_id" data-id="6138"></span>
    <!-- Task Body -->
   <p>From this HTML:</p>
 
@@ -585,9 +580,9 @@ It contains <strong>CSS</strong> and <strong>JavaScript</strong> design template
 
 <p>Build this responsive web page:</p>
 
-![Task3. Cards](./images/bootstrap2.jpg)
+![Task3. Cards](./images/bootstrap2.png)
 
-![Task3. Cards](./images/bootstrap3.jpg)
+![Task3. Cards](./images/bootstrap3.png)
 
 ![Task3. Cards](./images/3-GIFBootstrap.gif)
 
@@ -722,11 +717,11 @@ It contains <strong>CSS</strong> and <strong>JavaScript</strong> design template
 
 <p>Build this responsive web page:</p>
 
-![Task4. Bob Dylan](./images/bootstrap4.jpg)
+![Task4. Bob Dylan](./images/bootstrap4.png)
 
-![Task4. Bob Dylan](./images/bootstrap5.jpg)
+![Task4. Bob Dylan](./images/bootstrap5.png)
 
-![Task4. Bob Dylan](./images/bootstrap6.jpg)
+![Task4. Bob Dylan](./images/bootstrap6.png)
 
 ![Task4. Bob Dylan](./images/4-GIFBootstrap.gif)
 
@@ -979,9 +974,9 @@ It contains <strong>CSS</strong> and <strong>JavaScript</strong> design template
 
 <p>Create the custom stylesheet <code>6-styles.css</code> to match this layout.</p>
 
-![Task6. Overwrite CSS1](./images/bootstrap7.jpg)
+![Task6. Overwrite CSS1](./images/bootstrap7.png)
 
-![Task6. Overwrite CSS2](./images/bootstrap8.jpg)
+![Task6. Overwrite CSS2](./images/bootstrap8.png)
 
 ![Task6. Overwrite CSS3](./images/6-GIFBootstrap.gif)
 
